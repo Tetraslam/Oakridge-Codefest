@@ -98,8 +98,6 @@ if (impact >= 5000) {
   impactClassification = "Low";
 }
 
-createAlert();
-
 // Display the impact result
 document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives + "<br>" + "The cost of production for the original choice of material in this quantity is ₹" + cost + "." + "<br>" ;
 return false;
