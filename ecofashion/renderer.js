@@ -1,3 +1,5 @@
+
+
 try {
 submit_button = document.getElementById('submit-button');
 body = document.getElementsByTagName('body');
@@ -124,10 +126,15 @@ function removeLoader(){
 }
 }
 catch {
-  document.getElementById("co2").innerHTML = "<h2>" + sessionStorage.getItem("co2") + "KG OF CO<sub>2</sub> emissions produced</h2>"
-  document.getElementById("impactclass").innerHTML = sessionStorage.getItem("class")
-  document.getElementById("feedback").innerHTML = sessionStorage.getItem("feedback")
-  document.getElementById("alternatives").innerHTML = sessionStorage.getItem("alternatives")
-  document.getElementById("cost").innerHTML = sessionStorage.getItem("cost")
-  document.getElementById("alternativecost").innerHTML = sessionStorage.getItem("alternativecost")
+  eval = sessionStorage.getItem("class")
+  if ( eval == "Low") {
+    color = "cyan";
+  }
+  document.getElementById("co2").innerHTML = "<h2><span style = 'color:" + color + "';'>" + sessionStorage.getItem("co2") + "KG OF CO<sub>2</sub></span> emissions produced</h2>"
+  document.getElementById("impactclass").innerHTML = "<h2>IMPACT CLASSIFICATION: " + sessionStorage.getItem("class") + " </h2>"
+  document.getElementById("feedback").innerHTML = "<h2>SUSTAINABILITY EVALUATION: </h2>" + sessionStorage.getItem("feedback")
+  document.getElementById("alternatives").innerHTML = "<h2>ALTERNATIVE MATERIALS: </h2>" + sessionStorage.getItem("alternatives")
+  document.getElementById("cost").innerHTML = "<h2>ORIGINAL COST: </h2> ₹" + sessionStorage.getItem("cost")
+  document.getElementById("alternativecost").innerHTML = "<h2>ALTERNATIVE COST: </h2> ₹" + sessionStorage.getItem("alternativecost")
+  window.resizeTo("1920", "1080");
 }

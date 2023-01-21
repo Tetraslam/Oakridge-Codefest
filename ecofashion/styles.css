@@ -201,32 +201,34 @@ html {
 
 .column {
   float: left;
-  width: 25%;
-  padding: 0 10px;
+  width: 50%;
+  padding-top: 0;
 }
 
 .column2 {
   float: left;
   width: 50%;
-  padding: 0 10px;
+  padding-top: 0;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {margin: 0;}
 
-.row2 {margin: 0 -5px;}
+.row2 {margin: 0;}
 
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+  margin-top: 0;
 }
 
 .row2:after {
   content: "";
   display: table;
   clear: both;
+  margin-top: 0;
 }
 
 /* Style the counter cards */
@@ -235,6 +237,7 @@ html {
   padding: 16px;
   text-align: center;
   background-color: #24262f;
+  margin-top: 0;
 }
 
 .card2 {
@@ -242,6 +245,7 @@ html {
   padding: 16px;
   text-align: center;
   background-color: #24262f;
+  margin-top: 0;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
@@ -249,7 +253,7 @@ html {
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -257,6 +261,7 @@ html {
   .column2 {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
+
