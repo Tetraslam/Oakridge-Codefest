@@ -15,7 +15,7 @@ submit_button.onclick = function calculateImpact() {
   // Check if the user entered a valid amount of material used
   if (amount <= 0) {
       document.getElementById("impact-result").innerHTML = "Please enter a valid amount of material used.";
-      return;
+      return false;
   }
   
   // Use a switch statement to determine the impact based on the material
@@ -77,16 +77,16 @@ switch (transportation) {
 
 // Classify the impact score as high, medium, or low
 var impactClassification = "";
-if (impact >= 30) {
+if (impact >= 5000) {
   impactClassification = "High";
-} else if (impact >= 15 && impact < 30) {
+} else if (impact >= 1000 && impact < 5000) {
   impactClassification = "Medium";
 } else {
   impactClassification = "Low";
 }
 
 // Display the impact result
-document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO2e. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives;
+document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives;
 
 return false;
 }
