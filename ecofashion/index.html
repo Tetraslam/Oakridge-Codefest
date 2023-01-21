@@ -2,20 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
+    
     <link rel="stylesheet" href="styles.css">
     <title>EcoFashion | Home</title>
     <!-- Loader here -->
     <div id="loader"><img src="boringlogo.png" id="loader-content"></div>
-    
-    
   </head>
   <body>
     <nav class="navbar">
@@ -29,7 +20,7 @@
       
     </nav>
     <br><br><br><br><br><br>
-    <form>
+    <form method="GET">
       <label class = "mommy" for="materials">Select Material:</label>
       <br>
       <br>
@@ -65,7 +56,8 @@
       
       <button type="submit" id="submit-button">Calculate Impact</button>
   </form>
-  <div id="impact-result"></div>
+  <div id="impact-result"></div> 
 </body>
   <script src="./renderer.js"></script>
+  
 </html>

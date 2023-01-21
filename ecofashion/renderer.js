@@ -1,9 +1,9 @@
 submit_button = document.getElementById('submit-button');
 body = document.getElementsByTagName('body');
-
 body.onload = removeLoader()
 
 submit_button.onclick = function calculateImpact() {
+  
   // Get the selected values from the form
   var material = document.getElementById("materials").value;
   var amount = document.getElementById("amount").value;
@@ -101,6 +101,7 @@ if (impact >= 5000) {
 // Display the impact result
 document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives + "<br>" + "The cost of production for the original choice of material in this quantity is ₹" + cost + "." + "<br>" ;
 return false;
+
 }
 
 function removeLoader(){
@@ -113,4 +114,3 @@ function removeLoader(){
   },
              1000);  
 }
-
