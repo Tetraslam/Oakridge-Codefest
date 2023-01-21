@@ -1,3 +1,4 @@
+try {
 submit_button = document.getElementById('submit-button');
 body = document.getElementsByTagName('body');
 body.onload = removeLoader()
@@ -100,6 +101,13 @@ if (impact >= 5000) {
 
 // Display the impact result
 document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives + "<br>" + "The cost of production for the original choice of material in this quantity is ₹" + cost + "." + "<br>" ;
+sessionStorage.setItem("co2", impact);
+sessionStorage.setItem("class", impactClassification);
+sessionStorage.setItem("feedback", feedback);
+sessionStorage.setItem("alternatives", alternatives);
+sessionStorage.setItem("cost", cost);
+sessionStorage.setItem("alternativecost", alternativeCost);
+window.open("./analysis.html")
 return false;
 
 }
@@ -113,4 +121,13 @@ function removeLoader(){
   loader.style = 'display: none;';
   },
              1000);  
+}
+}
+catch {
+  document.getElementById("co2").innerHTML = "<h2>" + sessionStorage.getItem("co2") + "KG OF CO<sub>2</sub> emissions produced</h2>"
+  document.getElementById("impactclass").innerHTML = sessionStorage.getItem("class")
+  document.getElementById("feedback").innerHTML = sessionStorage.getItem("feedback")
+  document.getElementById("alternatives").innerHTML = sessionStorage.getItem("alternatives")
+  document.getElementById("cost").innerHTML = sessionStorage.getItem("cost")
+  document.getElementById("alternativecost").innerHTML = sessionStorage.getItem("alternativecost")
 }
