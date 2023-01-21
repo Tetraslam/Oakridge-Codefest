@@ -1,6 +1,7 @@
 
 
 try {
+  
 submit_button = document.getElementById('submit-button');
 body = document.getElementsByTagName('body');
 body.onload = removeLoader()
@@ -126,15 +127,37 @@ function removeLoader(){
 }
 }
 catch {
+  body.onload = removeLoader()
+  function removeLoader(){
+  
+    setTimeout(()=>{
+       let loader = document.getElementById('loader');
+    
+    // hide the loader
+    loader.style = 'display: none;';
+    },
+               1000);  
+  }
   eval = sessionStorage.getItem("class")
-  if ( eval == "Low") {
-    color = "cyan";
+  if ( eval == "Low" ) {
+    color = "lightgreen";
+  }
+  else if ( eval == "Medium" ) {
+    color = "orange"
+  }
+  else {
+    color = "red"
   }
   document.getElementById("co2").innerHTML = "<h2><span style = 'color:" + color + "';'>" + sessionStorage.getItem("co2") + "KG OF CO<sub>2</sub></span> emissions produced</h2>"
-  document.getElementById("impactclass").innerHTML = "<h2>IMPACT CLASSIFICATION: " + sessionStorage.getItem("class") + " </h2>"
-  document.getElementById("feedback").innerHTML = "<h2>SUSTAINABILITY EVALUATION: </h2>" + sessionStorage.getItem("feedback")
+  document.getElementById("impactclass").innerHTML = "<h2>IMPACT CLASSIFICATION: <span style = 'color:" + color + "';'>" + sessionStorage.getItem("class") + " </h2>"
+  document.getElementById("feedback").innerHTML = "<h2><span class = 'lgbtqlights'>SUSTAINABILITY EVALUATION: </span></h2>" + sessionStorage.getItem("feedback")
   document.getElementById("alternatives").innerHTML = "<h2>ALTERNATIVE MATERIALS: </h2>" + sessionStorage.getItem("alternatives")
   document.getElementById("cost").innerHTML = "<h2>ORIGINAL COST: </h2> ₹" + sessionStorage.getItem("cost")
   document.getElementById("alternativecost").innerHTML = "<h2>ALTERNATIVE COST: </h2> ₹" + sessionStorage.getItem("alternativecost")
   window.resizeTo("1920", "1080");
+  // Get the current window
+const currentWindow = window;
+
+// Expand the window to fullscreen mode
+currentWindow.document.body.requestFullscreen();
 }
