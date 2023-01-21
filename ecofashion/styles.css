@@ -3,6 +3,10 @@
 }
 
 
+body {
+  text-align: center;
+}
+
 .navbar{
   background-color: black;
   border-radius: 30px;
@@ -64,10 +68,50 @@ option {
 
 #submit-button {
   text-align: center;
-  margin-left: 50px;
+
 }
 
 div {
   color: var(--mommy_color);
   padding: 50px;
+}
+
+embed {
+  height: 900px;
+  width: 900px;
+  margin-top: 5%;
+}
+
+.mommysaranghae {
+  text-align: center;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#loader {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  z-index: 99999;  
+  background: #f30
+}
+
+#loader p {  
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
 }
