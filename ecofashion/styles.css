@@ -98,13 +98,14 @@ html {
   display: flex;
   position: fixed;
   top: 0;
+  bottom: 8px;
   left: 0;
   width: 100vw;
   min-height: 100vh;
   padding: 0;
   margin: 0;
   z-index: 99999;  
-  background: #f30
+  background: black
 }
 
 #loader p {  
@@ -114,4 +115,8 @@ html {
   font-size: 100px;
   padding: 0;
   margin: 0;
+}
+
+#loader-content {
+  height: 90%;
 }
