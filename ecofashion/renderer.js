@@ -1,4 +1,7 @@
 submit_button = document.getElementById('submit-button');
+body = document.getElementsByTagName('body');
+
+body.onload = removeLoader()
 
 submit_button.onclick = function calculateImpact() {
   // Get the selected values from the form
@@ -89,5 +92,16 @@ if (impact >= 5000) {
 document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives;
 
 return false;
+}
+
+function removeLoader(){
+  
+  setTimeout(()=>{
+     let loader = document.getElementById('loader');
+  
+  // hide the loader
+  loader.style = 'display: none;';
+  },
+             1000);  
 }
 
