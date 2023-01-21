@@ -1,5 +1,7 @@
 # TEAM NAME: Freeware Friends (2)
 
+Members: Shresht Bhowmick, Vishaal Iyer, Yuthika Goel
+
 ## Features
 - Take inventory of the food in the pantry
 - Food preferences
