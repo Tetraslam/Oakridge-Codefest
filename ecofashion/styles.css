@@ -5,6 +5,17 @@
 
 body {
   text-align: center;
+  font-family: 'Segoe UI';
+  background-image: url(whee.webp);
+  background-size: cover;
+
+  
+}
+
+body::before {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 10%;
+
 }
 
 .navbar{
@@ -55,8 +66,22 @@ body {
 
 
 select {
-  height: 30px;
-  width: 100px;
+  height: 40px;
+  width: 110px;
+  background-color: #24262f;
+  border-color: var(--mommy_color);
+  color: var(--mommy_color);
+  transition: background-color 0.5s;
+  border-radius: 0;
+  font-size: 20px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+select:hover {
+  background-color: var(--mommy_color);
+  color: black;
+  
 }
 
 option {
@@ -66,9 +91,55 @@ option {
   margin-top: 50px;
 }
 
+#amount {
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 40px;
+  border-color: --mommy_color;
+  background-color: #24262f;
+  color: var(--mommy_color);
+  text-align: center;
+  transition: background-color 0.5s;
+  border-style:solid;
+  border-top-color: var(--mommy_color);
+  border-left-color: var(--mommy_color);
+  border-right-color: var(--mommy_color);
+  border-bottom-color: var(--mommy_color);
+}
+
+#amount:focus {
+  border-color: #2792b9;
+}
+
+#amount:hover {
+  background-color: var(--mommy_color);
+  color: black;
+}
+
 #submit-button {
   text-align: center;
+  height: 55px;
+  width: 220px;
+  background-color: #24262f;
+  border-top-color: green;
+  border-left-color: green;
+  border-bottom-color: green;
+  border-right-color: green;
+  border-style: solid;
+  border-width: 5px;
+  color: var(--mommy_color);
+  transition: background-color 0.5s;
+  border-radius: 0;
+  font-size: 20px;
+  margin: 5px;
+  border-radius: 10px;
+}
 
+#submit-button:hover {
+  background-color: var(--mommy_color);
+  color: black;
+  border-width: 10px;
 }
 
 div {

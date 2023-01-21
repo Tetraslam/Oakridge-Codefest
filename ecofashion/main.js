@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { require, app, BrowserWindow } = require('electron');
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -8,6 +8,14 @@ const createWindow = () => {
 
   win.loadFile('index.html');
 };
+
+const createAlert = () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 500,
+  });
+  win.loadFile('analysis.html');
+}
 
 app.whenReady().then(() => {
   createWindow();
