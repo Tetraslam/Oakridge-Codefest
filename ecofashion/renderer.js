@@ -12,6 +12,7 @@ submit_button.onclick = function calculateImpact() {
   
   // Initialize the impact variable
   var impact = 0;
+  var cost = 0;
   var feedback = "";
   var alternatives = "";
   
@@ -25,23 +26,27 @@ submit_button.onclick = function calculateImpact() {
   switch (material) {
       case "cotton":
           impact += (10 * amount);
+          cost += 160 * amount;
           feedback += "Cotton is a widely used material, but it can have a high environmental impact due to the use of pesticides and water. ";
           alternatives += "Consider using organic cotton or other sustainable materials such as linen or hemp. ";
           break;
       case "denim":
           impact += (20 * amount);
+          cost += 450 * amount;
           feedback += "Denim is a durable material, but it requires a lot of water and energy to produce. ";
           alternatives += "Consider using sustainable denim made from organic cotton or recycled materials. ";
           break;
       case "leather":
           impact += (30 * amount);
+          cost += 230 * amount;
           feedback += "Leather is a durable material, but it can have a high environmental impact due to the use of chemicals and water. ";
           alternatives += "Consider using sustainable alternatives such as PU leather or synthetic leather. ";
           break;
       case "wool":
           impact += (15 * amount);
+          cost += 250 * amount;
           feedback += "Wool is a natural material, but it can have a high environmental impact due to the use of pesticides and water. ";
-          alternatives += "Consider using sustainable alternatives such as organic wool or alpaca. ";
+          alternatives += "Consider using sustainable alternatives such as organic wool or alpaca wool. ";
           break;
   }
   
@@ -89,7 +94,7 @@ if (impact >= 5000) {
 }
 
 // Display the impact result
-document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives;
+document.getElementById("impact-result").innerHTML = "The environmental impact of this piece of clothing is: " + impact + " kg CO<sub>2</sub> emissions. <br> Impact Classification: " + impactClassification + "<br>" + feedback + alternatives + "<br>" + "The cost of production for this material in this quantity is ₹" + cost + "." ;
 
 return false;
 }
