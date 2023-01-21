@@ -1,4 +1,4 @@
-#
+# TEAM NAME: Freeware Friends (2)
 
 ## Features
 - Take inventory of the food in the pantry
