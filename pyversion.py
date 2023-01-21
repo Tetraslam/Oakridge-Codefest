@@ -10,7 +10,7 @@ def calculate_impact():
 
     #initialize environmental impact as 0
     impact = 0
-
+ 
     #calculating impact based on materials used
     if materials.get() == "Organic cotton":
         impact += 5 * amount.get()
