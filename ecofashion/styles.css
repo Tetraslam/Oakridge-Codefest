@@ -66,3 +66,8 @@ option {
   text-align: center;
   margin-left: 50px;
 }
+
+div {
+  color: var(--mommy_color);
+  padding: 50px;
+}
