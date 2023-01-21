@@ -1,0 +1,68 @@
+:root {
+  --mommy_color: #ffffff;
+}
+
+
+.navbar{
+  background-color: black;
+  border-radius: 30px;
+  position: fixed;
+  width: 99%;
+  
+}
+.navbar ul{
+  overflow: auto;
+}
+.navbar li{
+  float:left;
+  list-style: none; 
+  margin: 13px 20px;
+  
+}
+.navbar li a{
+  padding: 3px 3px;
+  text-decoration: none;
+  color: white;
+}
+.navbar li a:hover{
+  color: red
+}
+.search{
+  float: right;
+  color: white;
+  padding: 12px 75px;
+}
+.navbar input{
+  border: 2px solid black;
+  border-radius: 14px;
+  padding: 3px 17px;
+  width: 129px;
+}
+
+body {
+  background-color: #24262f;
+} 
+
+.mommy {
+  font-size: 30px;
+  color: var(--mommy_color);
+  margin: 50px;
+}
+
+
+select {
+  height: 30px;
+  width: 100px;
+}
+
+option {
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#submit-button {
+  text-align: center;
+  margin-left: 50px;
+}

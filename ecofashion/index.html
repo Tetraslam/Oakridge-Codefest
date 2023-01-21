@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <title>EcoFashion | Home</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact us</a></li>
+          <div class="search">
+              <input type="text" name="search" id="search" placeholder="Search for a material">
+          </div>
+      </ul>
+      
+    </nav>
+    <br><br><br><br><br><br>
+    <form>
+      <label class = "mommy" for="materials">Select Material:</label>
+      <select id="materials" name="materials">
+          <option value="cotton">Cotton</option>
+          <option value="denim">Denim</option>
+          <option value="leather">Leather</option>
+          <option value="wool">Wool</option>
+      </select>
+      <br>
+      <br>
+      <label class = "mommy"  for="amount">Enter Amount of Material Used (in kilograms):</label>
+      <input type="number" id="amount" name="amount" min="0">
+      <br>
+      <br>
+      <label class = "mommy"  for="production">Select Production Method:</label>
+      <select id="production" name="production">
+          <option value="organic">Organic</option>
+          <option value="conventional">Conventional</option>
+          <option value="sustainable">Sustainable</option>
+      </select>
+      <br><br>
+      <label class = "mommy"  for="transportation">Select Transportation Method:</label>
+      <select id="transportation" name="transportation">
+          <option value="air">Air</option>
+          <option value="sea">Sea</option>
+          <option value="land">Land</option>
+      </select>
+      <br><br>
+      <button type="submit" id="submit-button">Calculate Impact</button>
+  </form>
+  <div id="impact-result"></div>
+</body>
+  <script src="./renderer.js"></script>
+</html>
