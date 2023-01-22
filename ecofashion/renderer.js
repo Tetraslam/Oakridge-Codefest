@@ -79,16 +79,16 @@ break;
 switch (transportation) {
   case "air":
       impact += (5 * amount);
-      feedback += "Air transportation has a high environmental impact due to the emissions. ";
-      alternatives += "Consider using sea or land transportation. ";
+      feedback += "Air transportation has a high environmental impact due to the emissions. <br><br>";
+      alternatives += "Consider using sea or land transportation. <br>";
       break;
   case "sea":
       impact += (2 * amount);
-      feedback += "Sea transportation is more sustainable than air transportation. ";
+      feedback += "Sea transportation is more sustainable than air transportation. <br><br>";
       break;
   case "land":
       impact += (1 * amount);
-      feedback += "Land transportation is the most sustainable option. ";
+      feedback += "Land transportation is the most sustainable option. <br><br>";
       break;
 }
 
@@ -152,8 +152,8 @@ catch {
   document.getElementById("impactclass").innerHTML = "<h2>IMPACT CLASSIFICATION: <span style = 'color:" + color + "';'>" + sessionStorage.getItem("class") + " </h2>"
   document.getElementById("feedback").innerHTML = "<h2><span class = 'lgbtqlights'>SUSTAINABILITY EVALUATION: </span></h2>" + sessionStorage.getItem("feedback")
   document.getElementById("alternatives").innerHTML = "<h2>ALTERNATIVE MATERIALS: </h2>" + sessionStorage.getItem("alternatives")
-  document.getElementById("cost").innerHTML = "<h2>ORIGINAL COST: </h2> ₹" + sessionStorage.getItem("cost")
-  document.getElementById("alternativecost").innerHTML = "<h2>ALTERNATIVE COST: </h2> ₹" + sessionStorage.getItem("alternativecost")
+  document.getElementById("cost").innerHTML = "<h2>ORIGINAL COST: </h2> <h3>₹" + sessionStorage.getItem("cost") + "</h3>"
+  document.getElementById("alternativecost").innerHTML = "<h2>ALTERNATIVE COST: </h2> <h3>₹" + sessionStorage.getItem("alternativecost") + "</h3>"
   window.resizeTo("1920", "1080");
   // Get the current window
 const currentWindow = window;
