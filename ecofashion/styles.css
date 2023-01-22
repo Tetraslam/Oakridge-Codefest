@@ -264,3 +264,26 @@ html {
     margin-bottom: 10px;
   }
 }
+
+
+#abouttheproject {
+  width: 90%;
+  display: flex;
+  background-color: #24262f;
+  align-items: center;
+  position: relative;
+  top: 130px;
+  left: 5%;
+  
+}
+#aboutimage {
+  float: left;
+  width: 65%
+}
+
+#abouttext {
+  float: right;
+  width: 35%;
+  
+}
+
