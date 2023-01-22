@@ -15,7 +15,7 @@
       spinner_stack = [];
       window.delay_completed = false;
       delay_completion = function() {
-        var x, _i, _len, _results;
+        var x,   _i, _len, _results;
         window.delay_completed = true;
         _results = [];
         for (_i = 0, _len = image_stack.length; _i < _len; _i++) {
@@ -33,7 +33,7 @@
         $spinner_img = $('<img>');
         $placeholder = $('<img>').attr({
           src: 'data:image/gif;base64,R0lGODlhAQABA',
-                IABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
+                IABAP
         });
         $placeholder.attr({
           width: $image.attr('width')
