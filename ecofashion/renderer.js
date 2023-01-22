@@ -23,7 +23,7 @@ submit_button.onclick = function calculateImpact() {
   
   // Check if the user entered a valid amount of material used
   if (amount <= 0) {
-      document.getElementById("impact-result").innerHTML = "Please enter a valid amount of material used.";
+      document.getElementById("impact-result").innerHTML = "<p style = 'margin-top: 5px; font-size: 25px; color: red;'> Please enter a valid amount of material used!</p>";
       return false;
   }
   
