@@ -287,3 +287,43 @@ html {
   
 }
 
+#whee {
+  font-family: 'Segoe UI';
+  font-size: 18px;
+}
+
+.column1 {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+  padding-right: 0px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row1 {margin: 1%}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #24262f;
+  border-color: var(--mommy_color);
+  border-width: 2px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
